@@ -1,0 +1,48 @@
+table {
+    width: 50%;
+    border-collapse: collapse; 
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f200; 
+}
+
+td, th {
+    border: 2px solid #ddd; 
+    padding: 8px;
+    text-align: left; 
+}
+
+th {
+    background-color: #4c84af; 
+    color: black; 
+}
+
+.header {
+    position: relative; 
+    text-align: left; 
+}
+
+.header h1 {
+    position: absolute; 
+    top: 25%; 
+    left: 40px; 
+    transform: translateY(-50%); 
+    color: white;
+    font-size: 62px; 
+    font-style: italic;
+    font-family: Arial, sans-serif; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header p {
+    position: absolute; 
+    top: calc(25% + 57px); 
+    left: 65px; 
+    color: whitesmoke;
+    font-size: 30px; 
+    font-style: italic; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif 
+    text 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+}

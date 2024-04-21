@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <link rel="stylesheet" type="text/css" href="./last.css" />
+   <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Styles for mobile menu */
+      .mobile-menu {
+        display: none;
+        background-color: black;
+      }
+      .mobile-menu.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .gold-text {
+        color: #dfba5d;
+      }
+      .video-container {
+        width: 100%;
+        max-width: 900px; /* Adjust max-width as needed */
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      .client-images {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .client-images img {
+        width: 250px;
+        height: 100px; /* Set the desired height */
+        object-fit: cover; /* Maintain aspect ratio */
+        /* Make the images circular */
+        margin-right: 10px; /* Adjust margin between images */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- start of navbar  -->
+    <nav
+      class="flex items-center font-sanserif justify-between px-4 py-2 bg-black text-white"
+    >
+      <div class="flex items-center">
+        <!-- Logo -->
+        <img src="/images/Logo.jpg" alt="Logo" class="h-16 w-18 mr-2 pr-4" />
+        <span class="font-bold text-xl gold-text">
+          Pioneer Security Services (pvt) ltd
+        </span>
+      </div>
+      <div class="block md:hidden">
+        <!-- Mobile menu button -->
+        <button
+          id="mobileMenuBtn"
+          class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
+        >
+          <svg
+            class="h-4 w-4 fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden md:block">
+        <!-- Navigation links -->
+
+        <ul class="flex space-x-10 text-xl gold-text">
+          <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+          <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+          <li></li>
+          <li>
+            <a href="services.html" class="hover:text-gray-300">Services</a>
+          </li>
+
+          <li></li>
+          <li>
+            <a href="contactus.html" class="hover:text-gray-300">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu h-screen">
+      <ul class="flex-col space-y-4 text-xl text-white gapy-4">
+        <li><a href="#" class="hover:text-gray-300">Home</a></li>
+        <li><a href="#" class="hover:text-gray-300">About</a></li>
+        <li><a href="#" class="hover:text-gray-300">Services</a></li>
+        <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- end of navbar  -->
+
+  <body>
+    <header class="header">
+      <img
+        src="./images/contact us.jpeg"
+        alt="Contact Us Image"
+        style="width: 1700px; height: 900px"
+      />
+
+      <h1>Contact us</h1>
+      <p>
+        Initiate dialogues with the vanguards of the security prowess,<br />
+        where each interaction fortifies peace of mind.
+      </p>
+    </header>
+
+    <section class="content">
+      <table class="branches-table">
+        <tr>
+          <th>City</th>
+          <th>Contact Info</th>
+          <th>Address</th>
+        </tr>
+        <tr>
+          <td>Islamabad (Headquarters)</td>
+          <td>111-111-946</td>
+          <td>H-113 Blue Area Lane 35, Islamabad</td>
+        </tr>
+        <tr>
+          <td>Lahore</td>
+          <td>222-222-753</td>
+          <td>123 Main Street, Lahore</td>
+        </tr>
+        <tr>
+          <td>Karachi</td>
+          <td>111-111-947</td>
+          <td>
+            Bahria Tower Floor 14th, Office # 496, Block-2II PECHS, Karachi
+          </td>
+        </tr>
+        <tr>
+          <td>Quetta</td>
+          <td>111-111-949</td>
+          <td>H-91+92, Jinnah Town, Quetta</td>
+        </tr>
+      </table>
+    </section>
+
+    <footer class="footer"></footer>
+  </body>
+</html>
