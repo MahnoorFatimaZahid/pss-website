@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <link rel="stylesheet" type="text/css" href="./contactus.css" />
-   <link
+    <link rel="stylesheet" type="text/css" href="./contactus.css" />
+    <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
@@ -44,6 +43,43 @@
         /* Make the images circular */
         margin-right: 10px; /* Adjust margin between images */
       }
+      /* Center content */
+      .container {
+        max-width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+      }
+      @media (min-width: 640px) {
+        .container {
+          max-width: 640px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 768px;
+        }
+      }
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 1024px;
+        }
+      }
+      /* Table styles */
+      .branches-table {
+        width: 100%;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        border-collapse: collapse;
+        margin: 20px 0; /* Adjust margin as needed */
+      }
+      .branches-table th,
+      .branches-table td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      .branches-table th {
+        background-color: #f2f2f2;
+      }
     </style>
   </head>
   <body>
@@ -53,7 +89,9 @@
     >
       <div class="flex items-center">
         <!-- Logo -->
-        <img src="/images/Logo.jpg" alt="Logo" class="h-16 w-18 mr-2 pr-4" />
+        <a href="index.html">
+          <img src="/images/Logo.jpg" alt="Logo" class="h-16 w-18 mr-2 pr-4" />
+        </a>
         <span class="font-bold text-xl gold-text">
           Pioneer Security Services (pvt) ltd
         </span>
@@ -75,7 +113,6 @@
       </div>
       <div class="hidden md:block">
         <!-- Navigation links -->
-
         <ul class="flex space-x-10 text-xl gold-text">
           <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
           <li><a href="about.html" class="hover:text-gray-300">About</a></li>
@@ -88,249 +125,357 @@
         </ul>
       </div>
     </nav>
-
     <!-- Mobile menu -->
     <div id="mobileMenu" class="mobile-menu h-screen">
       <ul class="flex-col space-y-4 text-xl text-white gapy-4">
         <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
         <li><a href="about.html" class="hover:text-gray-300">About</a></li>
-        <li><a href="services.html" class="hover:text-gray-300">Our Services</a></li>
-        <li><a href="contactus.html" class="hover:text-gray-300">Contact Us</a></li>
+        <li>
+          <a href="services.html" class="hover:text-gray-300">Services</a>
+        </li>
+        <li>
+          <a href="contactus.html" class="hover:text-gray-300">Contact</a>
+        </li>
       </ul>
     </div>
-
     <!-- end of navbar  -->
 
-  <body>
-    <div class="header">
-      <img
-        src="./images/contact us.jpeg"
-        alt="ContactUsImage"
-        class="w-full "
-        height="920px"
-     
-      />
-
-      <h1 class="lg:text-5xl md:text-3xl sm:text-xl">Contact us</h1>
-      <p class="text-xl">
-        Initiate dialogues with the vanguards of the security prowess,<br />
-        where each interaction fortifies peace of mind.
-      </p>
-    </div>
-
-<section class="content flex  ">
-  <div class="max-w-screen-lg mx-auto flex my-14 w-full lg:flex-row flex-col">
-    <table class="branches-table lg:w-1/2">
-        <tr>
-          <th>City</th>
-          <th>Contact Info</th>
-          <th>Address</th>
-        </tr>
-        <tr>
-          <td>Islamabad (Headquarters)</td>
-          <td>111-111-946</td>
-          <td>H-113 Blue Area Lane 35, Islamabad</td>
-        </tr>
-        <tr>
-          <td>Lahore</td>
-          <td>222-222-753</td>
-          <td>123 Main Street, Lahore</td>
-        </tr>
-        <tr>
-          <td>Karachi</td>
-          <td>111-111-947</td>
-          <td>
-            Bahria Tower Floor 14th, Office # 496, Block-2II PECHS, Karachi
-          </td>
-        </tr>
-        <tr>
-          <td>Quetta</td>
-          <td>111-111-949</td>
-          <td>H-91+92, Jinnah Town, Quetta</td>
-        </tr>
-      </table>
-    <div class="w-full lg:w-1/2">
-      <form action="mailto:manahilnawaz10@gmail.com" method="post" enctype="text/plain" class="p-4 lg:m-4 w-64">
-
-          <fieldset class="relative">
-            <legend class="text-sm text-gray-700 font-semibold absolute top-0 left-4 bg-white px-2">Get in Touch</legend>
-            
-      <div class="border p-4 border-gray-300 m-4" style="width: 600px;">
-        <div class="flex">
-            <div class="mb-4 flex flex-row mr-8 items-center">
-        <label for="firstName" class="block text-sm font-medium text-gray-700 mr-4  ">First Name:</label>
-        <input type="text" id="firstName" name="firstName" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block shadow-sm sm:text-sm border-gray-300 rounded-md border h-8 " required>
+    <div class="container">
+      <div class="header">
+        <img
+          src="./images/contact us.jpeg"
+          alt="ContactUsImage"
+          class="w-full"
+          height="920px"
+        />
+        <h1 class="lg:text-5xl md:text-3xl sm:text-xl">Contact us</h1>
+        <p class="text-xl">
+          Initiate dialogues with the vanguards of the security prowess,<br />
+          where each interaction fortifies peace of mind.
+        </p>
       </div>
 
-      <div class="mb-4 flex items-center">
-        <label for="lastName" class="block text-sm font-medium text-gray-700 mr-4">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" class="mt-1  border focus:ring-indigo-500 focus:border-indigo-500 block  shadow-sm sm:text-sm border-gray-300 rounded-md h-8" required>
-      </div>
+      <section class="content flex justify-center">
+        <!-- Centering the content -->
+        <div class="max-w-screen-lg flex my-14 w-full lg:flex-row flex-col">
+          <div class="w-full lg:w-1/2 flex justify-center">
+            <table class="branches-table">
+              <tr>
+                <th>City</th>
+                <th>Contact Info</th>
+                <th>Address</th>
+              </tr>
+              <tr>
+                <td>Islamabad (Headquarters)</td>
+                <td>111-111-946</td>
+                <td>H-113 Blue Area Lane 35, Islamabad</td>
+              </tr>
+              <tr>
+                <td>Lahore</td>
+                <td>222-222-753</td>
+                <td>123 Main Street, Lahore</td>
+              </tr>
+              <tr>
+                <td>Karachi</td>
+                <td>111-111-947</td>
+                <td>
+                  Bahria Tower Floor 14th, Office # 496, Block-2II PECHS,
+                  Karachi
+                </td>
+              </tr>
+              <tr>
+                <td>Quetta</td>
+                <td>111-111-949</td>
+                <td>H-91+92, Jinnah Town, Quetta</td>
+              </tr>
+            </table>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <form
+              action="mailto:manahilnawaz10@gmail.com"
+              method="post"
+              enctype="text/plain"
+              class="p-4 lg:m-4 w-64"
+            >
+              <fieldset class="relative">
+                <legend
+                  class="text-sm text-gray-700 font-semibold absolute top-0 left-4 bg-white px-2"
+                >
+                  Get in Touch
+                </legend>
+
+                <div
+                  class="border p-4 border-gray-300 m-4"
+                  style="width: 600px"
+                >
+                  <div class="flex">
+                    <div class="mb-4 flex flex-row mr-8 items-center">
+                      <label
+                        for="firstName"
+                        class="block text-sm font-medium text-gray-700 mr-4"
+                        >First Name:</label
+                      >
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block shadow-sm sm:text-sm border-gray-300 rounded-md border h-8"
+                        required
+                      />
+                    </div>
+
+                    <div class="mb-4 flex items-center">
+                      <label
+                        for="lastName"
+                        class="block text-sm font-medium text-gray-700 mr-4"
+                        >Last Name:</label
+                      >
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        class="mt-1 border focus:ring-indigo-500 focus:border-indigo-500 block shadow-sm sm:text-sm border-gray-300 rounded-md h-8"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-4 flex items-center mb-6">
+                    <span
+                      class="block text-sm font-medium text-gray-700 justify-center items-center mr-16"
+                      >Gender:</span
+                    >
+
+                    <div class="mt-1 flex gap-4 justify-center items-center">
+                      <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="male"
+                        class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        required
+                      />
+                      <label for="male" class="ml-2">Male</label><br />
+                      <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="female"
+                        class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        required
+                      />
+                      <label for="female" class="ml-2">Female</label><br />
+                      <input
+                        type="radio"
+                        id="other"
+                        name="gender"
+                        value="other"
+                        class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        required
+                      />
+                      <label for="other" class="ml-2">Other</label>
+                    </div>
+                  </div>
+
+                  <div class="flex">
+                    <div class="mb-4 mr-4">
+                      <input
+                        type="tel"
+                        id="phoneNumber"
+                        placeholder="Phone Number"
+                        class="mt-1 block w-64 sm:text-sm h-10 border rounded-md"
+                        required
+                      />
+                    </div>
+
+                    <div class="mb-4 flex flex-row items-center">
+                      <label
+                        for="city"
+                        class="block text-sm font-medium text-gray-700 mr-4 justify-center items-center"
+                        >City:</label
+                      >
+                      <select
+                        id="city"
+                        name="city"
+                        class="mt-1 block w-64 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none h-10 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required
+                      >
+                        <option value="">Select a city</option>
+                        <option value="New York">New York</option>
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Houston">Houston</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mb-4 mt-4">
+                    <label
+                      for="companyOrIndividual"
+                      class="block text-sm font-medium text-gray-700"
+                      >Company or Individual:</label
+                    >
+                    <select
+                      id="companyOrIndividual"
+                      name="companyOrIndividual"
+                      class="mt-1 block w-full py-2 px-3 border bg-white rounded-md shadow-sm sm:text-sm"
+                      required
+                    >
+                      <option value="">Select an option</option>
+                      <option value="Company">Company</option>
+                      <option value="Individual">Individual</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-700"
+                      >Email:</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="mt-1 border block w-full sm:text-sm h-8 rounded-md"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-4">
+                    <label
+                      for="questionMessage"
+                      class="block text-sm font-medium text-gray-700"
+                      >Question/Message:</label
+                    >
+                    <textarea
+                      id="questionMessage"
+                      name="questionMessage"
+                      rows="4"
+                      class="mt-1 border w-full rounded-md"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="flex my-4">
+                    <input type="checkbox" />
+                    <p class="ml-2">I would like to receive emails from you</p>
+                  </div>
+                  <div class="flex ml-72 gap-4">
+                    <!-- Reset button -->
+                    <button
+                      type="reset"
+                      class="py-2 px-4 border border-transparent rounded-xl shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-48"
+                    >
+                      Reset
+                    </button>
+                    <!-- Submit button -->
+                    <button
+                      type="submit"
+                      class="py-2 px-4 border border-transparent rounded-xl shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-48"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
         </div>
+      </section>
+    </div>
 
-      <div class="mb-4 flex items-center mb-6">
-        <span class="block text-sm font-medium text-gray-700 justify-center items-center mr-16">Gender:</span>
-
-
-        <div class="mt-1 flex gap-4 justify-center items-center">
-          <input type="radio" id="male" name="gender" value="male" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" required>
-          <label for="male" class="ml-2">Male</label><br>
-          <input type="radio" id="female" name="gender" value="female" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" required>
-          <label for="female" class="ml-2">Female</label><br>
-          <input type="radio" id="other" name="gender" value="other" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" required>
-          <label for="other" class="ml-2">Other</label>
+    <footer>
+      <div
+        class="flex md:flex-row flex-col justify-between bg-black text-white p-8"
+      >
+        <div class="flex justify-center items-center">
+          <img src="/images/Logo.jpg" alt="Logo" class="h-36 w-48 mr-2 pr-4" />
         </div>
-      </div>
-
-      <div class="flex ">
-        <div class="mb-4 mr-4 ">
-        
-        <input type="tel" id="phoneNumber" placeholder="Phone Number" class="mt-1 block w-64 sm:text-sm h-10   border rounded-md" required>
-      </div>
-
-      <div class="mb-4 flex flex-row  items-center">
-        <label for="city" class="block text-sm font-medium text-gray-700 mr-4 justify-center items-center">City:</label>
-        <select id="city" name="city" class="mt-1 block w-64 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none h-10 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
-          <option value="">Select a city</option>
-          <option value="New York">New York</option>
-          <option value="Los Angeles">Los Angeles</option>
-          <option value="Chicago">Chicago</option>
-          <option value="Houston">Houston</option>
-        </select>
-      </div>
-      </div>
-
-      <div class="mb-4 mt-4">
-        <label for="companyOrIndividual" class="block text-sm font-medium text-gray-700">Company or Individual:</label>
-        <select id="companyOrIndividual" name="companyOrIndividual" class="mt-1 block w-full py-2 px-3 border bg-white rounded-md shadow-sm sm:text-sm" required>
-          <option value="">Select an option</option>
-          <option value="Company">Company</option>
-          <option value="Individual">Individual</option>
-        </select>
-      </div>
-
-      <div class="mb-4">
-        <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
-        <input type="email" id="email" name="email" class="mt-1 border block w-full  sm:text-sm h-8 rounded-md" required>
-      </div>
-
-      <div class="mb-4">
-        <label for="questionMessage" class="block text-sm font-medium text-gray-700">Question/Message:</label>
-        <textarea id="questionMessage" name="questionMessage" rows="4" class="mt-1 border w-full rounded-md" required></textarea>
-      </div>
-      <div class="flex my-4">
-        <input type="checkbox">
-        <p class="ml-2" >I would like to receive emails from you</p>
-      </div>
-      <div class="flex ml-72 gap-4">
-        <!-- Reset button -->
-        <button type="reset" class=" py-2 px-4 border border-transparent rounded-xl shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-48">Reset</button>
-        <!-- Submit button -->
-        <button type="submit" class=" py-2 px-4 border border-transparent rounded-xl shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-48">Submit</button>
-      </div>
-    </div>
-  </fieldset>
- </form>
-    </div>
-  </div>
-</section>
-
-   <footer>
-        <div
-          class="flex md:flex-row flex-col justify-between bg-black text-white"
-        >
-          <div class="flex justify-center items-center">
+        <div class="flex flex-col justify-center items-center">
+          <h4 class="font-semibold">social Links</h4>
+          <div class="flex md:gap-x-4">
             <img
-              src="/images/Logo.jpg"
-              alt="Logo"
-              class="h-36 w-48 mr-2 pr-4"
+              src="./images/svgIcons/icon1 (1).png"
+              alt="icons"
+              width="30"
+              height="30"
+            />
+
+            <img
+              src="./images//svgIcons/icon1 (2).png"
+              alt="icons"
+              width="30"
+              height="30"
+              style="fill: white"
+            />
+            <img
+              src="images/svgIcons/icon1 (3).png"
+              alt="icons"
+              width="30"
+              height="30"
+              style="fill: white"
+            />
+            <img
+              src="images/svgIcons/icon1 (4).png"
+              alt="icons"
+              width="40"
+              height="30"
+              class="mr-2"
+              style="fill: white"
             />
           </div>
-          <div class="flex flex-col justify-center items-center">
-            <h4 class="font-semibold">social Links</h4>
-            <div class="flex md:gap-x-4">
-              <img
-                src="./images/svgIcons/icon1 (1).png"
-                alt="icons"
-                width="30"
-                height="30"
-              />
-
-              <img
-                src="./images//svgIcons/icon1 (2).png"
-                alt="icons"
-                width="30"
-                height="30"
-                style="fill: white"
-              />
-              <img
-                src="images/svgIcons/icon1 (3).png"
-                alt="icons"
-                width="30"
-                height="30"
-                style="fill: white"
-              />
-              <img
-                src="images/svgIcons/icon1 (4).png"
-                alt="icons"
-                width="40"
-                height="30"
-                class="mr-2"
-                style="fill: white"
-              />
-            </div>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center md:flex-start mt-8"
+        >
+          <h4 class="font-bold text-xl mb-2 flex flex-col">Contact Us</h4>
+          <div class="flex flex-row mb-2">
+            <img
+              src="./images/svgIcons/icon5.png"
+              alt="icons"
+              width="30"
+              height="30"
+              class="mr-2"
+              style="fill: white"
+            />
+            <h5>H-1335 Blue Area Lane 35, Islamabad</h5>
           </div>
-          <div
-            class="flex flex-col justify-center items-center md:flex-start mt-8"
-          >
-            <h4 class="font-bold text-xl mb-2 flex flex-col">Contact Us</h4>
-            <div class="flex flex-row mb-2">
-              <img
-                src="./images/svgIcons/icon5.png"
-                alt="icons"
-                width="30"
-                height="30"
-                class="mr-2"
-                style="fill: white"
-              />
-              <h5>H-1335 Blue Area Lane 35, Islamabad</h5>
-            </div>
-            <div class="flex flex-row mb-2">
-              <img
-                src="./images/svgIcons/icon7.png"
-                alt="icons"
-                width="30"
-                height="30"
-                class="mr-2"
-                style="fill: white"
-              />
-              <h5>9:00 - 18:00</h5>
-            </div>
+          <div class="flex flex-row mb-2">
+            <img
+              src="./images/svgIcons/icon7.png"
+              alt="icons"
+              width="30"
+              height="30"
+              class="mr-2"
+              style="fill: white"
+            />
+            <h5>9:00 - 18:00</h5>
+          </div>
 
-            <div class="flex flex-row mb-2">
-              <img
-                src="./images/svgIcons/icon6.png"
-                alt="icons"
-                width="30"
-                height="30"
-                class="mr-2"
-                style="fill: white"
-              />
-              <p>111-111-946</p>
-            </div>
-            <div class="flex flex-row">
-              <img
-                src="./images/svgIcons/icon8.png"
-                alt="icons"
-                width="30"
-                height="30"
-                class="mr-2"
-                style="fill: white"
-              />
-              <p>info@pss.com.pk</p>
-            </div>
+          <div class="flex flex-row mb-2">
+            <img
+              src="./images/svgIcons/icon6.png"
+              alt="icons"
+              width="30"
+              height="30"
+              class="mr-2"
+              style="fill: white"
+            />
+            <p>111-111-946</p>
+          </div>
+          <div class="flex flex-row">
+            <img
+              src="./images/svgIcons/icon8.png"
+              alt="icons"
+              width="30"
+              height="30"
+              class="mr-2"
+              style="fill: white"
+            />
+            <p>info@pss.com.pk</p>
           </div>
         </div>
-      </footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
