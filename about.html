@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    
     <style>
       /* Styles for mobile menu */
       .mobile-menu {
@@ -41,67 +42,69 @@
         /* Make the images circular */
         margin-right: 10px; /* Adjust margin between images */
       }
-      .message {
-        width: 800px;
-      }
     </style>
   </head>
   <body>
     <div id="aboutus">
-      <nav
-        class="flex items-center font-sanserif justify-between px-4 py-2 bg-black text-white"
-      >
-        <div class="flex items-center">
-          <!-- Logo -->
-          <img src="/images/Logo.jpg" alt="Logo" class="h-16 w-18 mr-2 pr-4" />
-          <span class="font-bold text-xl gold-text">
-            Pioneer Security Services (pvt) ltd
-          </span>
-        </div>
-        <div class="block md:hidden">
-          <!-- Mobile menu button -->
-          <button
-            id="mobileMenuBtn"
-            class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
-          >
-            <svg
-              class="h-4 w-4 fill-current"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden md:block">
-           <!-- Navigation links -->
+   <!-- start of navbar  -->
+   <nav
+   class="flex items-center font-sanserif justify-between px-4 py-2 bg-black text-white"
+ >
+   <div class="flex items-center">
+     <!-- Logo -->
+     <a href="index.html">
+       <img src="/images/Logo.jpg" alt="Logo" class="h-16 w-18 mr-2 pr-4" />
+     </a>
+     <span class="font-bold text-xl gold-text">
+       Pioneer Security Services (pvt) ltd
+     </span>
+   </div>
+   <div class="block md:hidden">
+     <!-- Mobile menu button -->
+     <button
+       id="mobileMenuBtn"
+       class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
+     >
+       <svg
+         class="h-4 w-4 fill-current"
+         viewBox="0 0 20 20"
+         xmlns="http://www.w3.org/2000/svg"
+       >
+         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+       </svg>
+     </button>
+   </div>
+   <div class="hidden md:block">
+     <!-- Navigation links -->
 
-        <ul class="flex space-x-10 text-xl gold-text">
-          <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
-          <li><a href="about.html" class="hover:text-gray-300">About</a></li>
-          <li>
-            <a href="services.html" class="hover:text-gray-300">Our Services</a>
-          </li>
-          <li>
-            <a href="contactus.html" class="hover:text-gray-300">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+     <ul class="flex space-x-10 text-xl gold-text">
+       <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+       <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+       <li>
+         <a href="services.html" class="hover:text-gray-300">Our Services</a>
+       </li>
+       <li>
+         <a href="contactus.html" class="hover:text-gray-300">Contact Us</a>
+       </li>
+     </ul>
+   </div>
+ </nav>
 
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="mobile-menu h-screen">
-      <ul class="flex-col space-y-4 text-xl text-white gapy-4">
-        <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
-        <li><a href="about.html" class="hover:text-gray-300">About</a></li>
-        <li>
-          <a href="services.html" class="hover:text-gray-300">Services</a>
-        </li>
-        <li>
-          <a href="contactus.html" class="hover:text-gray-300">Contact</a>
-        </li>
-      </ul>
-    </div>
+ <!-- Mobile menu -->
+ <div id="mobileMenu" class="mobile-menu h-screen">
+   <ul class="flex-col space-y-4 text-xl text-white gapy-4">
+     <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+     <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+     <li>
+       <a href="services.html" class="hover:text-gray-300">Services</a>
+     </li>
+     <li>
+       <a href="contactus.html" class="hover:text-gray-300">Contact</a>
+     </li>
+   </ul>
+ </div>
+
+ <!-- end of navbar  -->
 
       <!-- about section  -->
       <div>
@@ -243,6 +246,13 @@
           </div>
         </div>
       </footer>
+      <script>
+        document
+          .getElementById("mobileMenuBtn")
+          .addEventListener("click", function () {
+            document.getElementById("mobileMenu").classList.toggle("active");
+          });
+      </script>
 
         </div>
       </div>
